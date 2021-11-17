@@ -1,7 +1,7 @@
 #import "RNJitsiMeetViewManager.h"
 #import "RNJitsiMeetView.h"
 #import <JitsiMeetSDK/JitsiMeetUserInfo.h>
-
+#import <JitsiMeetSDK/JitsiMeetSDk-Swift.h>
 @implementation RNJitsiMeetViewManager{
     RNJitsiMeetView *jitsiMeetView;
 }
@@ -16,6 +16,7 @@ RCT_EXPORT_VIEW_PROPERTY(onEnteredPip, RCTBubblingEventBlock)
 {
   jitsiMeetView = [[RNJitsiMeetView alloc] init];
   jitsiMeetView.delegate = self;
+  JMCallKitProxy.enabled = false;
   return jitsiMeetView;
 }
 
