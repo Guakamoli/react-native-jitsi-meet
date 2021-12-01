@@ -59,6 +59,7 @@ dependencies {
     exclude group: 'com.facebook.react', module: 'react-native-community_netinfo'
     exclude group: 'com.facebook.react', module: 'react-native-device-info'
     exclude group: 'com.facebook', module: 'hermes'
+    exclude group: 'org.webkit', module: 'android-jsc'
     transitive = true
   }
 }
